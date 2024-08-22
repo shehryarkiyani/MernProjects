@@ -6,6 +6,12 @@ export const AddTodo = async (req, res) => {
     await newTodo.save();
     return res.status(200).json(newTodo);
   } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({
+        message:
+          "Todo item with this name already exists. Please choose a different name.",
+      });
+    }
     return res.status(500).json(err.message);
   }
 };

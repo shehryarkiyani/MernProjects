@@ -1,6 +1,7 @@
 /ECommerce-Website/client/node_modules
-/Blog-Website/client/node_modules
-/Blog-Website/server/node_modules
+/Blog/client/node_modules
+/Blog/server/node_modules
+/Blog/server/.env
 /ECommerce-Website/server/node_modules
 /ECommerce-Website/server/.env
 /Whatsapp-Clone/client/node_modules
