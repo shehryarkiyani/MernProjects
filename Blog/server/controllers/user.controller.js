@@ -86,7 +86,7 @@ export const DeleteUser = async (req, res) => {
   }
 };
 export const LogoutUser = async (req, res) => {
-  const token = req?.headers?.cookie || null;
+  const token = req?.cookies?.token || null;
 
   try {
     if (token === undefined || token === null) {

@@ -1,4 +1,5 @@
 import express from "express";
+import { AuthenticatedUser } from "../middlewares/authmiddleware.js";
 import {
   AddUser,
   DeleteUser,
@@ -9,9 +10,9 @@ import {
 } from "../controllers/user.controller.js";
 const router = express.Router();
 router.post("/", AddUser);
-router.delete("/:id", DeleteUser);
-router.get("/", GetAllUsers);
+router.delete("/:id", AuthenticatedUser, DeleteUser);
+router.get("/", AuthenticatedUser, GetAllUsers);
 router.post("/signin", Signin);
-router.patch("/:id", UpdateUser);
-router.get("/logout", LogoutUser);
+router.patch("/:id", AuthenticatedUser, UpdateUser);
+router.get("/logout", AuthenticatedUser, LogoutUser);
 export default router;

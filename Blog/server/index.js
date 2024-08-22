@@ -1,12 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import Connection from "./database/db.js";
 import UserRoutes from "./routes/user.routes.js";
 dotenv.config();
 const app = express();
 app.use(cors());
+app.use(cookieParser());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/users", UserRoutes);
