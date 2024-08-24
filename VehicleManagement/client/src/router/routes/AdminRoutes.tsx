@@ -6,6 +6,8 @@ import Layout from "layout";
 // import { Layout } from "Layout";
 
 const AdminDashboard = lazy(() => import("../../pages/Dashboard"));
+const Categories = lazy(() => import("../../pages/Categories"));
+const Cars = lazy(() => import("../../pages/Cars"));
 const AdminRoutes: TCommonRoutesProps[] = [
   {
     path: "",
@@ -20,6 +22,22 @@ const AdminRoutes: TCommonRoutesProps[] = [
         element: (
           <PrivateRoute>
             <AdminDashboard />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "cars",
+        element: (
+          <PrivateRoute>
+            <Cars />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "categories",
+        element: (
+          <PrivateRoute>
+            <Categories />
           </PrivateRoute>
         ),
       },

@@ -5,7 +5,9 @@ import PasswordInput from "components/ui/Inputs/PasswordInput";
 import handImg from "assets/hand.svg";
 import Button from "components/ui/Button";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Signin = () => {
+  const navigate = useNavigate();
   const [userdata, setuserdata] = useState({
     email: "",
     password: "",
@@ -14,6 +16,7 @@ const Signin = () => {
     e.preventDefault();
     console.log(userdata, "userdata");
     sessionStorage.setItem("Token", "Token");
+    navigate("/dashboard");
   };
   return (
     <div className="relative flex flex-col gap-5 items-center justify-center w-full min-h-[100vh]">
