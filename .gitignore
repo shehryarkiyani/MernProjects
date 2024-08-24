@@ -1,3 +1,7 @@
+/VehicleManagement/client/node_modules
+/VehicleManagement/client/.env
+/VehicleManagement/server/node_modules
+/VehicleManagement/server/.env
 /ECommerce-Website/client/node_modules
 /Blog/client/node_modules
 /Blog/server/node_modules

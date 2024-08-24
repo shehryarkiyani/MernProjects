@@ -8,11 +8,14 @@ const CategorySchema = mongoose.Schema(
       unique: true,
       trim: true,
     },
-    description: String,
+    description: {
+      type: String,
+      default: "",
+    },
   },
   { timestamps: true }
 );
 
-const category = mongoose.model("Category", CategorySchema);
+const Category = mongoose.model("Category", CategorySchema);
 
-export default category;
+export default Category;

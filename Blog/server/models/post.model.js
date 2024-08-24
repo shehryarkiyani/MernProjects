@@ -27,7 +27,11 @@ const PostSchema = new Schema(
         ref: "Comment", // Reference to the Comment model
       },
     ],
-    coverImage: String, // Optional field for the cover image of the post
+    coverImage: {
+      type: String,
+      required: true,
+    }, // Optional field for the cover image of the post
+    coverImagePublicId: String, // Add this field to store the public_id
   },
   { timestamps: true }
 );

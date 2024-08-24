@@ -13,7 +13,7 @@ export const AuthenticatedUser = (req, res, next) => {
       if (error) {
         return res.status(403).json({ msg: "invalid token" });
       }
-      console.log(user, "loginuser");
+
       req.user = user;
       next();
     });
