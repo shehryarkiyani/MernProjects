@@ -14,7 +14,7 @@ const Header = () => {
   const userdata = JSON.parse(localStorage.getItem("user") as string);
   const dispatch = useDispatch();
   return (
-    <div className="flex items-start justify-between w-full ">
+    <div className="flex items-center justify-between w-full ">
       <div className="flex items-center gap-4">
         {window.innerWidth <= 1024 && (
           <img
@@ -27,8 +27,8 @@ const Header = () => {
           />
         )}
 
-        <h2 className="font-manrope text-[#18120F] text-[32px] font-bold">
-          {splitRoute(location.pathname)}
+        <h2 className="font-manrope text-[#18120F] text-base ">
+          Admin {">"} {splitRoute(location.pathname)}
         </h2>
       </div>
       <div className="flex flex-col items-center gap-1">

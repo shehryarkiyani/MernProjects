@@ -16,3 +16,8 @@ export interface TCommonRoutesProps {
   meta?: TMeta;
   children?: TCommonRoutesProps[];
 }
+export type TPagination = {
+  count: number;
+  next: null | string;
+  previous: null | string;
+};

@@ -13,9 +13,11 @@ module.exports = {
         grey: {
           900: "#666666",
           700: "#999999",
+          600: "#dcdbdd",
           500: "#cccccc",
           400: "#e0e0e0",
           300: "#f3f4f8",
+
           100: "#fbfcfc",
         },
         secondary: {
