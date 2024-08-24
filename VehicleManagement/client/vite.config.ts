@@ -24,6 +24,8 @@ export default defineConfig({
       types: path.resolve(__dirname, "src/types"),
       utils: path.resolve(__dirname, "src/utils"),
       layout: path.resolve(__dirname, "src/layout"),
+      config: path.resolve(__dirname, "src/config"),
+      hooks: path.resolve(__dirname, "src/hooks"),
     },
   },
 });

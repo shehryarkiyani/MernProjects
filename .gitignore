@@ -41,3 +41,6 @@
 /gmail-clone/client/package-lock.json
 /gmail-clone/server/node_modules
 /gmail-clone/server/package-lock.json
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat

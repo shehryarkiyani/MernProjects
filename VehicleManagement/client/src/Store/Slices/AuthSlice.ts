@@ -1,13 +1,20 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { createSlice } from "@reduxjs/toolkit";
-
+import url from "config/index";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 type LoginData = {
   authData: {};
 };
 type AuthData = {};
-
+export const Signup = async () => {
+  try {
+    const response = await url.post("");
+    console.log("response", response);
+  } catch (err) {
+    console.log(err);
+  }
+};
 const initialState: LoginData = {
   authData: {},
 };
